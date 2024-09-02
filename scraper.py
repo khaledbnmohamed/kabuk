@@ -22,15 +22,13 @@ proxy_pool = itertools.cycle(proxies)
 def create_driver_with_proxy(proxy):
     chrome_options = Options()
     # chrome_options.add_argument(f'--proxy-server={proxy}')
-    # chrome_options.add_argument("--headless")  # Run in headless mode for performance
+    chrome_options.add_argument("--headless")
 
-    # Path to ChromeDriver
     service = Service('/opt/homebrew/bin/chromedriver')
 
     driver = webdriver.Chrome(service=service, options=chrome_options)
     return driver
 
-# Get the next proxy
 proxy = next(proxy_pool)
 print(f"Using proxy: {proxy}")
 

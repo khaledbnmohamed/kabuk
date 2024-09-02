@@ -16,13 +16,8 @@
 
 ### Instructions to Run the Scraper
 
-1. **Clone the Repository**: First, clone the repository where the scraper script is stored.
-   ```bash
-   git clone https://your-repo-url.git
-   cd your-repo-folder
-   ```
 
-2. **Set Up the Virtual Environment**: It's recommended to use a Python virtual environment to manage dependencies.
+1. **Set Up the Virtual Environment**: 
    ```bash
    python3 -m venv myenv
    source myenv/bin/activate
@@ -30,10 +25,10 @@
 
 3. **Install Dependencies**: Run the following command to install the necessary Python packages.
    ```bash
-   pip install requests beautifulsoup4 selenium pandas
+   pip3 install requests beautifulsoup4 selenium pandas
    ```
 
-4. **Download ChromeDriver**: Selenium requires a browser driver to interface with Chrome. Make sure to download the appropriate version of ChromeDriver for your Chrome version [here](https://sites.google.com/a/chromium.org/chromedriver/downloads), and place it in a directory included in your system’s PATH, or specify the path directly in the script.
+4. **Download ChromeDriver**: Selenium requires a browser driver to interface with Chrome
 
 5. **Run the Scraper**: Finally, execute the scraper script.
    ```bash
@@ -42,17 +37,17 @@
 
 6. **Review Output**:
    - The scraper will generate a `hotel_prices.csv` file containing the scraped data.
-   - A `summary_report.csv` file will also be created, providing a statistical summary of the data.
+   - A `summary_report.csv` file will also be created
 
 ### Dependencies
 
-- Python 3.7+
-- `requests`: To make HTTP requests.
-- `beautifulsoup4`: For parsing HTML content (if used in other parts of the project).
-- `selenium`: For interacting with the web pages.
-- `pandas`: For data manipulation and generating the summary report.
+- Python 3.7
+- `requests`
+- `beautifulsoup4`
+- `selenium`
+- `pandas`
 
 ### Notes
 
-- **Proxy Reliability**: Free proxies can be unreliable. If all proxies fail, consider using a paid proxy service for more stable connections.
+- **Proxy Reliability**: Free proxies can be unreliable and that's why I skipped it and used my own IP address for this task but ideally it should be used
 - **Performance**: Running the scraper with proxies and JavaScript rendering via Selenium can be slow. For a large dataset, consider optimizing the scraping process or running it on a server.
