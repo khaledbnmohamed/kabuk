@@ -12,6 +12,7 @@
 ### Challenges Faced
 
 - **Unreliable Free Proxies**: Free proxies are often slow or unreliable. so I skipped it and used my own IP address for the time sake
+- **Dependecies**: The script relies on external libraries like Selenium and ChromeDriver, which need to be installed separately and required a lot of effort to set up
 - **JavaScript Rendering**: Extracting data from a page that relies heavily on JavaScript for rendering required Selenium, which adds overhead in terms of performance but is essential for accurate data collection.
 
 ### Instructions to Run the Scraper
